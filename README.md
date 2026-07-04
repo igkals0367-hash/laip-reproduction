@@ -40,10 +40,6 @@ All LLM calls go through the Batch API (~50% cheaper). A pilot run precedes any
 full run to measure real per-run cost. Raw responses are logged so a parsing
 bug never requires re-paying for calls. Target: ~$3–7 for the first pass.
 
-## Status
-Project scaffolding complete (guide Step 3). Next: implement components one at a
-time (guide Step 5), starting with `environment.py`.
-
 ## Original paper
 Gelpí, R. A., Xue, E., & Cunningham, W. A. (2025). *Towards Machine Theory of
 Mind with Large Language Model-Augmented Inverse Planning.* arXiv:2507.03682.
