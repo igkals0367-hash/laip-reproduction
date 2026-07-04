@@ -1,0 +1,19 @@
+# Run configuration — kept out of code so every setting is logged & reproducible
+
+model:
+  provider: openai          # openai first; anthropic added later
+  name: gpt-4o-mini
+  temperature: 0.0          # fixed for reproducibility; log with every run
+  seed: 42                  # fixed seed where the provider supports it
+
+batch:
+  use_batch_api: true       # ~50% cost saving on offline runs
+
+runs:
+  pilot_trajectories: 1     # pilot before any full run
+  pilot_runs_per_trajectory: 2
+  full_runs_per_trajectory: 10   # Study 1/2 target (adjust after pilot)
+
+logging:
+  raw_response_dir: data/raw_responses
+  results_dir: data/results
