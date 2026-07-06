@@ -26,13 +26,13 @@ ADJACENCY = {
     7: frozenset({6})
 }
 
-Restaurant_locations = {
-    3: frozenset("Chinese"),
-    5: frozenset("Mexican"),
-    7: frozenset("Japanese")
+RESTAURANT_LOCATIONS = {
+    3: "Chinese",
+    5: "Mexican",
+    7: "Japanese"
 }
 
-Visibility = {
+VISIBILITY = {
     "Chinese": frozenset({1,2,4}),
     "Mexican": frozenset({2,4,6}),
     "Japanese": frozenset({4,6})
