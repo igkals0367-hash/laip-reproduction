@@ -16,3 +16,24 @@ Everything here is deterministic ground-truth structure, not model output.
 """
 
 # TODO: encode room layout, visibility rules, trajectory list from Appendix A.2
+ADJACENCY = {
+    1: frozenset({2}),
+    2: frozenset({1,3,4}),
+    3: frozenset({2}),
+    4: frozenset({2,5,6}),
+    5: frozenset({4}),
+    6: frozenset({4,7}),
+    7: frozenset({6})
+}
+
+Restaurant_locations = {
+    3: frozenset("Chinese"),
+    5: frozenset("Mexican"),
+    7: frozenset("Japanese")
+}
+
+Visibility = {
+    "Chinese": frozenset({1,2,4}),
+    "Mexican": frozenset({2,4,6}),
+    "Japanese": frozenset({4,6})
+}
