@@ -15,7 +15,6 @@ grid world. This module encodes:
 Everything here is deterministic ground-truth structure, not model output.
 """
 
-# TODO: encode room layout, visibility rules, trajectory list from Appendix A.2
 ADJACENCY = {
     1: frozenset({2}),
     2: frozenset({1,3,4}),
@@ -37,3 +36,8 @@ VISIBILITY = {
     "Mexican": frozenset({2,4,6}),
     "Japanese": frozenset({4,6})
 }
+
+for room, neighbors in ADJACENCY.items():
+    for n in neighbors:
+        assert room in ADJACENCY[n], f"asymmetric edge {room} ->{n}"
+
